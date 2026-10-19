@@ -1,0 +1,18 @@
+Sat Oct 17 13:16:08 2026
+(2)Destination.scx
+At: 7 o'clock.
+
+Buildings:
+Zerg_Hatchery
+Zerg_Evolution_Chamber
+
+Failure Reasons:
+Power: 0
+Angle: 534
+Placement: 281
+Tight: 22
+Path: 0
+Spawn: 0
+
+Generation Time: 14.6916ms and succesful.
+--------------------

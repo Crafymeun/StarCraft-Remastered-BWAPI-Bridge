@@ -1,0 +1,581 @@
+{
+    "Bot Info" :
+    {
+        "BotName"                   : "Microwave",
+        "Authors"                   : "Micky Holdorf",
+        "PrintInfoOnStart"          : true
+    },
+
+    "BWAPI" :
+    {
+        "SetLocalSpeed"             : 21,
+        "SetFrameSkip"              : 0,
+        "UserInput"                 : true,
+        "CompleteMapInformation"    : false
+    },
+
+    "Micro" :
+    {
+        "UseSparcraftSimulation"    : true,
+        "KiteWithRangedUnits"       : true,
+        "KiteLongerRangedUnits"     : ["Mutalisk", "Guardian"],
+        "WorkersDefendRush"         : true,
+        "RetreatMeleeUnitShields"   : 0,
+        "RetreatMeleeUnitHP"        : 8,
+        "RegroupRadius"             : 500,
+        "UnitNearEnemyRadius"       : 500,
+        "ScoutDefenseRadius"        : 0
+    },
+
+    "Macro" :
+    {
+        "BOSSFrameLimit"            : 160,
+        "WorkersPerRefinery"        : 3,
+        "WorkersPerPatch"           : { "Zerg" : 1.5, "Protoss" : 2.0, "Terran" : 2.0 },
+        "BuildingSpacing"           : 1,
+        "PylonSpacing"              : 3
+    },
+
+    "Debug" :
+    {
+        "ErrorLogFilename"          : "bwapi-data/write/Microwave_ErrorLog.txt",
+        "LogAssertToErrorFile"      : true,
+        "LogDebug"                  : false,
+        "DrawGameInfo"              : false,
+        "DrawUnitHealthBars"        : false,
+        "DrawProductionInfo"        : false,
+        "DrawBuildOrderSearchInfo"  : false,
+        "DrawScoutInfo"             : false,
+        "DrawEnemyUnitInfo"         : false,
+        "DrawHiddenEnemies"         : false,
+        "DrawModuleTimers"          : false,
+        "DrawResourceInfo"          : false,
+        "DrawCombatSimInfo"         : false,
+        "DrawUnitTargetInfo"        : false,
+        "DrawUnitOrders"            : false,
+        "DrawBWTAInfo"              : false,
+        "DrawBWEMInfo"              : false,
+        "DrawBWEBInfo"              : false,
+        "DrawMapInfo"               : false,
+        "DrawMapGrid"               : false,
+        "DrawMapDistances"          : false,
+        "DrawBaseInfo"              : false,
+        "DrawSquadInfo"             : false,
+        "DrawWorkerInfo"            : false,
+        "DrawMouseCursorInfo"       : false,
+        "DrawBuildingInfo"          : false,
+        "DrawReservedBuildingTiles" : false,
+        "DrawBOSSStateInfo"         : false,
+        "DrawStrategyInfo"          : false,
+        "DrawStrategyDebug"         : false
+    },
+
+    "Modules" :
+    {
+        "UseAutoObserver"           : false,
+        "UseStrategyIO"             : true,
+        "UseStrategyLearning"       : true
+    },
+
+    "Tools" :
+    {
+        "MapGridSize"               : 320
+    },
+
+    "Strategy" :
+    {
+        "ScoutHarassEnemy"          : false,
+        "PlayGoodStrategiesFirst"   : true,
+        "TrainingMode"              : false,
+        "UsePlanRecognizer"         : true,
+
+        "UseEnemySpecificStrategy"  : true,
+        "UseMapSpecificStrategy"    : true,
+        "UseHumanSpecificStrategy"  : true,
+
+        "ReadDirectory"             : "bwapi-data/read/",
+        "WriteDirectory"            : "bwapi-data/write/",
+        "ReadDirTraining"           : "bwapi-data/AI/Training/",
+
+        "MaxGameRecords"            : 200,
+
+        "ZvT" : {
+            "StrategyMix" : [
+                { "Weight" : 20, "Strategy" : "4PoolSoft" },
+                { "Weight" : 10, "Strategy" : "7Pool" },
+                { "Weight" : 10, "Strategy" : "7PoolHydraLingRush7D" },
+                { "Weight" : 10, "Strategy" : "9Pool" },
+                { "Weight" : 20, "Strategy" : "9PoolSpeed" },
+                { "Weight" : 20, "Strategy" : "9PoolSpeedLing" },
+                { "Weight" : 10, "Strategy" : "9PoolLurker" },
+                { "Weight" : 10, "Strategy" : "9PoolHatchGasSpeed8D" },
+                { "Weight" : 10, "Strategy" : "9PoolGasHatchSpeed8D" },
+                { "Weight" : 20, "Strategy" : "12PoolMuta" },
+                { "Weight" : 10, "Strategy" : "OverpoolSpeed" },
+                { "Weight" : 10, "Strategy" : "10Hatch9Pool9gas" },
+                { "Weight" : 10, "Strategy" : "2HatchHydra" },
+                { "Weight" : 10, "Strategy" : "2HatchLurker" },
+                { "Weight" : 20, "Strategy" : "2HatchMuta" },
+                { "Weight" :  5, "Strategy" : "3HatchLingBust" },
+                { "Weight" :  5, "Strategy" : "3HatchHydraBust" },
+                { "Weight" : 20, "Strategy" : "3HatchMuta" },
+                { "Weight" : 20, "Strategy" : "3HatchMutaExpo", "Weight2" : 0 },
+                { "Weight" :  5, "Strategy" : "3HatchPoolHydra", "Weight2" : 0 }
+             ]
+        },
+
+        "ZvP" : {
+            "StrategyMix" : [
+                { "Weight" : 20, "Strategy" : "4PoolSoft" },
+                { "Weight" : 10, "Strategy" : "9Pool" },
+                { "Weight" : 20, "Strategy" : "9PoolSpeed" },
+                { "Weight" : 20, "Strategy" : "9PoolSpeedLing" },
+                { "Weight" : 10, "Strategy" : "9PoolHatchGasSpeed8D" },
+                { "Weight" : 10, "Strategy" : "9PoolGasHatchSpeed8D" },
+                { "Weight" : 10, "Strategy" : "OverpoolSpeed" },
+                { "Weight" : 10, "Strategy" : "10Hatch9Pool9gas" },
+                { "Weight" : 20, "Strategy" : "ZvP_10Hatch9Pool" },
+                { "Weight" : 10, "Strategy" : "2HatchHydra" },
+                { "Weight" : 10, "Strategy" : "2HatchLurker" },
+                { "Weight" : 10, "Strategy" : "2HatchMuta" },
+                { "Weight" : 10, "Strategy" : "3HatchLingBust" },
+                { "Weight" : 10, "Strategy" : "3HatchHydraBust" },
+                { "Weight" : 10, "Strategy" : "3HatchMuta" },
+                { "Weight" : 10, "Strategy" : "3HatchMutaExpo", "Weight2" : 0 },
+                { "Weight" :  5, "Strategy" : "3HatchPoolHydra", "Weight2" : 0 },
+                { "Weight" :  5, "Strategy" : "4HatchBeforeGas", "Weight2" : 0 },
+                { "Weight" :  5, "Strategy" : "4HatchPoolHydra", "Weight2" : 0 },
+                { "Weight" :  5, "Strategy" : "5HatchPoolHydra", "Weight2" : 0 }
+            ]
+        },
+
+        "ZvZ" : {
+            "StrategyMix" : [
+                { "Weight" : 20, "Strategy" : "4PoolSoft" },
+                { "Weight" : 20, "Strategy" : "9PoolSpeed" },
+                { "Weight" : 20, "Strategy" : "9PoolSpeedLing" },
+                { "Weight" : 10, "Strategy" : "9PoolHatch" },
+                { "Weight" : 10, "Strategy" : "9PoolSunken" },
+                { "Weight" : 10, "Strategy" : "9PoolHatchGasSpeed8D" },
+                { "Weight" : 10, "Strategy" : "9PoolGasHatchSpeed8D" },
+                { "Weight" : 20, "Strategy" : "OverpoolSpeed" },
+                { "Weight" :  5, "Strategy" : "OverpoolTurtle" },
+                { "Weight" : 10, "Strategy" : "ZvZ_Overpool9Gas" },
+                { "Weight" : 10, "Strategy" : "ZvZ_Overpool11Gas" },
+                { "Weight" :  5, "Strategy" : "ZvZ_Overgas9Pool" },
+                { "Weight" :  5, "Strategy" : "ZvZ_Overgas11Pool" },
+                { "Weight" :  5, "Strategy" : "9HatchMain8Pool8Gas", "Weight2" : 0 },
+                { "Weight" :  5, "Strategy" : "12Pool" },
+                { "Weight" : 10, "Strategy" : "12PoolMain" },
+                { "Weight" :  5, "Strategy" : "12Hatch", "Weight2" : 0 },
+                { "Weight" :  5, "Strategy" : "12HatchMain", "Weight2" : 0 }
+            ]
+        },
+
+        "ZvU" : {
+            "StrategyMix" : [
+                { "Weight" : 20, "Strategy" : "4PoolSoft" },
+                { "Weight" : 20, "Strategy" : "9Pool" },
+                { "Weight" : 10, "Strategy" : "9PoolSpeed" },
+                { "Weight" : 10, "Strategy" : "9PoolSpeedLing" },
+                { "Weight" : 10, "Strategy" : "9PoolExpo" },
+                { "Weight" : 20, "Strategy" : "9PoolHatch" },
+                { "Weight" : 20, "Strategy" : "9PoolSunken" },
+                { "Weight" : 20, "Strategy" : "9PoolHatchGasSpeed8D" },
+                { "Weight" : 20, "Strategy" : "9PoolGasHatchSpeed8D" },
+                { "Weight" : 10, "Strategy" : "Overpool" },
+                { "Weight" : 10, "Strategy" : "OverpoolSpeed" },
+                { "Weight" : 10, "Strategy" : "OverpoolTurtle" }
+            ]
+        },
+
+        "MapSpecificStrategy" :
+        {
+            "(4)Sparkle1.1.scx" : {
+                "Zerg" : [
+                    { "Weight" : 33, "Strategy" : "1HatchMuta_Sparkle" },
+                    { "Weight" : 33, "Strategy" : "2HatchMuta_Sparkle" },
+                    { "Weight" : 33, "Strategy" : "3HatchMuta_Sparkle" }
+                ]
+            },
+            "(3)Plasma1.0.scx" : {
+                "Zerg" : [
+                    { "Weight" : 33, "Strategy" : "1HatchMuta_Sparkle" },
+                    { "Weight" : 33, "Strategy" : "2HatchMuta_Sparkle" },
+                    { "Weight" : 33, "Strategy" : "3HatchMuta_Sparkle" }
+                ]
+            },
+            "(8)BigGameHunters.scx" : {
+                "Zerg" : [
+                    { "Weight" : 100, "Strategy" : "3HatchHydra_BHG" }
+                ]
+            }
+        },
+
+        "EnemySpecificStrategy" :
+        {
+            "WuliBot" : {
+                "Zerg" : [
+                    { "Weight" : 10, "Strategy" : "ZvP_9Hatch9Pool" },
+                    { "Weight" : 10, "Strategy" : "ZvP_10Hatch9Pool" },
+                    { "Weight" : 10, "Strategy" : "ZvP_11Hatch10Pool" }
+                ]
+            }
+        },
+
+        "HumanSpecificStrategy" : {
+            "ZvT" : {
+                "StrategyMix" : [
+                    { "Weight" : 10, "Strategy" : "4PoolHard" },
+                    { "Weight" : 10, "Strategy" : "9PoolSpeed" },
+                    { "Weight" : 20, "Strategy" : "Overpool11GasMuta" },
+                    { "Weight" : 20, "Strategy" : "11Pool11GasMuta" },
+                    { "Weight" : 30, "Strategy" : "2HatchMuta" },
+                    { "Weight" : 30, "Strategy" : "2HatchLurker" },
+                    { "Weight" : 20, "Strategy" : "3HatchLingBust" },
+                    { "Weight" : 20, "Strategy" : "3HatchLurker" },
+                    { "Weight" : 10, "Strategy" : "3HatchMuta" },
+                    { "Weight" : 10, "Strategy" : "3HatchMutaExpo", "Weight2" : 0 }
+                ]
+            },
+            "ZvP" : {
+                "StrategyMix" : [
+                    { "Weight" : 10, "Strategy" : "4PoolHard" },
+                    { "Weight" : 10, "Strategy" : "9PoolSpeed" },
+                    { "Weight" : 20, "Strategy" : "Overpool11GasMuta" },
+                    { "Weight" : 20, "Strategy" : "11Pool11GasMuta" },
+                    { "Weight" : 20, "Strategy" : "2HatchHydra" },
+                    { "Weight" : 20, "Strategy" : "2HatchMuta" },
+                    { "Weight" : 30, "Strategy" : "3HatchLingBust" },
+                    { "Weight" : 30, "Strategy" : "3HatchHydraBust" },
+                    { "Weight" :  5, "Strategy" : "3HatchPoolHydra" },
+                    { "Weight" :  5, "Strategy" : "4HatchPoolHydra" }
+                ]
+            },
+            "ZvZ" : {
+                "StrategyMix" : [
+                    { "Weight" : 10, "Strategy" : "4PoolHard" },
+                    { "Weight" : 30, "Strategy" : "9PoolSpeed" },
+                    { "Weight" : 10, "Strategy" : "ZvZ_Overpool11Gas" },
+                    { "Weight" : 10, "Strategy" : "ZvZ_Overgas11Pool" },
+                    { "Weight" : 20, "Strategy" : "Overpool11GasMuta" },
+                    { "Weight" : 20, "Strategy" : "11Pool11GasMuta" },
+                    { "Weight" :  5, "Strategy" : "9HatchMain8Pool8Gas" },
+                    { "Weight" : 20, "Strategy" : "12PoolMain" },
+                    { "Weight" : 20, "Strategy" : "12Pool" },
+                    { "Weight" :  5, "Strategy" : "12HatchMain", "Weight2" : 0 },
+                    { "Weight" :  5, "Strategy" : "12Hatch", "Weight2" : 0 }
+                ]
+            },
+            "ZvU" : {
+                "StrategyMix" : [
+                    { "Weight" : 10, "Strategy" : "4PoolHard" },
+                    { "Weight" : 30, "Strategy" : "9PoolSpeed" },
+                    { "Weight" : 20, "Strategy" : "12Pool" },
+                    { "Weight" : 10, "Strategy" : "12Hatch", "Weight2" : 0 },
+                    { "Weight" : 20, "Strategy" : "Overpool11GasMuta" },
+                    { "Weight" : 20, "Strategy" : "11Pool11GasMuta" }
+                ]
+            }
+        },
+
+        "CounterStrategies" :
+        {
+            "Counter Proxy" :        "AntiFastCheese",
+            "Counter WorkerRush" :   "AntiFastCheese",
+            "Counter FastRush" :     "AntiFastCheese",
+            "Counter FastRush vZ" :  "AntiFastPool",
+            "Counter HeavyRush vU" : "AntiZealot",
+            "Counter HeavyRush vT" : "AntiMarine",
+            "Counter HeavyRush vP" : "AntiZealot",
+            "Counter HeavyRush vZ" : {
+                "Zerg" : [
+                    { "Weight" : 20, "Strategy" : "FastPool" },
+                    { "Weight" : 10, "Strategy" : "9PoolSunken" },
+                    { "Weight" : 10, "Strategy" : "9PoolHatchGasSpeed8D" },
+                    { "Weight" : 10, "Strategy" : "9PoolGasHatchSpeed8D" },
+                    { "Weight" : 10, "Strategy" : "OverpoolTurtle" },
+                    { "Weight" : 10, "Strategy" : "12PoolMain" },
+                    { "Weight" : 10, "Strategy" : "12Pool" },
+                    { "Weight" : 10, "Strategy" : "12HatchMain", "Weight2" : 0 },
+                    { "Weight" : 10, "Strategy" : "12Hatch", "Weight2" : 0 }
+                ]
+            },
+            "Counter Factory" : {
+                "Zerg" : [
+                    { "Weight" : 10, "Strategy" : "FastPool" },
+                    { "Weight" : 30, "Strategy" : "7PoolHydraLingRush7D" },
+                    { "Weight" : 30, "Strategy" : "7PoolHydraRush7D" },
+                    { "Weight" : 30, "Strategy" : "8PoolHydraRush8D" },
+                    { "Weight" : 20, "Strategy" : "9PoolSpeed" },
+                    { "Weight" : 20, "Strategy" : "9PoolSpeedLing" },
+                    { "Weight" : 20, "Strategy" : "9PoolHatchGasSpeed8D" },
+                    { "Weight" : 20, "Strategy" : "9PoolGasHatchSpeed8D" },
+                    { "Weight" : 10, "Strategy" : "2HatchMuta" },
+                    { "Weight" : 10, "Strategy" : "3HatchHydra" },
+                    { "Weight" : 10, "Strategy" : "3HatchMuta" },
+                    { "Weight" : 10, "Strategy" : "3HatchHydraExpo", "Weight2" : 0 },
+                    { "Weight" : 10, "Strategy" : "3HatchMutaExpo", "Weight2" : 0 }
+                ]
+            },
+            "Counter SafeExpand vT" : {
+                "Zerg" : [
+                    { "Weight" : 20, "Strategy" : "FastPool" },
+                    { "Weight" : 20, "Strategy" : "9PoolSpeed" },
+                    { "Weight" : 20, "Strategy" : "9PoolSpeedLing" },
+                    { "Weight" : 20, "Strategy" : "9PoolHatchGasSpeed8D" },
+                    { "Weight" : 20, "Strategy" : "9PoolGasHatchSpeed8D" },
+                    { "Weight" : 20, "Strategy" : "3HatchLurker" },
+                    { "Weight" : 20, "Strategy" : "3HatchMuta" },
+                    { "Weight" : 20, "Strategy" : "3HatchMutaExpo", "Weight2" : 0 }
+                ]
+            },
+            "Counter SafeExpand vP" : "AntiForgeExpand",
+            "Counter NakedExpand vT" : {
+                "Zerg" : [
+                    { "Weight" : 20, "Strategy" : "FastPool" },
+                    { "Weight" : 20, "Strategy" : "9PoolSpeed" },
+                    { "Weight" : 20, "Strategy" : "9PoolSpeedLing" },
+                    { "Weight" : 20, "Strategy" : "9PoolHatchGasSpeed8D" },
+                    { "Weight" : 20, "Strategy" : "9PoolGasHatchSpeed8D" },
+                    { "Weight" : 20, "Strategy" : "OverpoolSpeed" }
+                ]
+            },
+            "Counter NakedExpand vP" : {
+                "Zerg" : [
+                    { "Weight" : 20, "Strategy" : "FastPool" },
+                    { "Weight" : 20, "Strategy" : "9PoolSpeed" },
+                    { "Weight" : 20, "Strategy" : "9PoolSpeedLing" },
+                    { "Weight" : 20, "Strategy" : "9PoolHatchGasSpeed8D" },
+                    { "Weight" : 20, "Strategy" : "9PoolGasHatchSpeed8D" },
+                    { "Weight" : 20, "Strategy" : "OverpoolSpeed" }
+                ]
+            },
+            "Counter NakedExpand vZ" : {
+                "Zerg" : [
+                    { "Weight" : 15, "Strategy" : "FastPool" },
+                    { "Weight" : 10, "Strategy" : "9PoolSpeed" },
+                    { "Weight" : 10, "Strategy" : "9PoolSpeedLing" },
+                    { "Weight" : 10, "Strategy" : "9PoolHatchGasSpeed8D" },
+                    { "Weight" : 10, "Strategy" : "9PoolGasHatchSpeed8D" },
+                    { "Weight" : 10, "Strategy" : "OverpoolSpeed" },
+                    { "Weight" :  5, "Strategy" : "12PoolMain" },
+                    { "Weight" :  5, "Strategy" : "12Pool" },
+                    { "Weight" :  5, "Strategy" : "12HatchMain" },
+                    { "Weight" :  5, "Strategy" : "12Hatch" }
+                ]
+            },
+            "Counter Turtle vT" : {
+                "Zerg" : [
+                    { "Weight" :  10, "Strategy" : "3HatchHydra" },
+                    { "Weight" :  10, "Strategy" : "3HatchHydraExpo", "Weight2" : 0 },
+                    { "Weight" :  80, "Strategy" : "AntiForgeExpand" }
+                ]
+            },
+            "Counter Turtle vP" : {
+                "Zerg" : [
+                    { "Weight" :  10, "Strategy" : "3HatchHydra" },
+                    { "Weight" :  10, "Strategy" : "3HatchHydraExpo", "Weight2" : 0 },
+                    { "Weight" :  80, "Strategy" : "AntiForgeExpand" }
+                ]
+            },
+            "Counter Turtle vZ" : {
+                "Zerg" : [
+                    { "Weight" : 20, "Strategy" : "9PoolSpeed" },
+                    { "Weight" : 20, "Strategy" : "OverpoolSpeed" },
+                    { "Weight" : 20, "Strategy" : "ZvZ_Overpool9Gas" },
+                    { "Weight" : 20, "Strategy" : "ZvZ_Overpool11Gas" },
+                    { "Weight" : 20, "Strategy" : "ZvZ_Overgas9Pool" },
+                    { "Weight" : 20, "Strategy" : "ZvZ_Overgas11Pool" },
+                    { "Weight" : 20, "Strategy" : "12PoolMain" },
+                    { "Weight" : 20, "Strategy" : "12Pool" }
+                ]
+            }
+        },
+
+        "StrategyCombos" :
+        {
+            "FastPool" : {
+                "Zerg" : [
+                    { "Weight" : 30, "Strategy" : "4PoolHard" },
+                    { "Weight" : 30, "Strategy" : "4PoolSoft" },
+                    { "Weight" : 30, "Strategy" : "5Pool" }
+                ]
+            },
+
+            "AntiMarine" : {
+                "Zerg" : [
+                    { "Weight" : 10, "Strategy" : "9PoolLurker" },
+                    { "Weight" : 10, "Strategy" : "OverpoolLurker" },
+                    { "Weight" : 10, "Strategy" : "11HatchTurtleMuta" },
+                    { "Weight" : 15, "Strategy" : "11HatchTurtleLurker" },
+                    { "Weight" : 20, "Strategy" : "2HatchLurker" }
+                ]
+            },
+
+            "AntiZealot" : {
+                "Zerg" : [
+                    { "Weight" : 10, "Strategy" : "OverpoolTurtle" },
+                    { "Weight" : 10, "Strategy" : "9Hatch9Pool9Gas" },
+                    { "Weight" : 10, "Strategy" : "10Hatch9Pool9gas" },
+                    { "Weight" : 10, "Strategy" : "ZvP_9Hatch9Pool" },
+                    { "Weight" : 10, "Strategy" : "ZvP_10Hatch9Pool" },
+                    { "Weight" : 10, "Strategy" : "ZvP_11Hatch10Pool" },
+                    { "Weight" : 10, "Strategy" : "11HatchTurtleHydra" },
+                    { "Weight" : 10, "Strategy" : "11HatchTurtleMuta" },
+                    { "Weight" : 20, "Strategy" : "ZvP_2HatchHydra" }
+                ]
+            },
+
+            "AntiFastPool" : {
+                "Zerg" : [
+                    { "Weight" : 50, "Strategy" : "9PoolSunken" },
+                    { "Weight" : 50, "Strategy" : "OverpoolSunken" }
+                ]
+            },
+
+            "AntiFastCheese" : {
+                "Zerg" : [
+                    { "Weight" : 35, "Strategy" : "9Pool" },
+                    { "Weight" : 35, "Strategy" : "9PoolSunken" },
+                    { "Weight" : 30, "Strategy" : "9PoolExpo" }
+                ]
+            },
+
+            "AntiSlowerCheese" : {
+                "Zerg" : [
+                    { "Weight" : 50, "Strategy" : "9PoolSpeed" },
+                    { "Weight" : 50, "Strategy" : "OverpoolSpeed" }
+                ]
+            },
+
+            "AntiForgeExpand" : {
+                "Zerg" : [
+                    { "Weight" : 10, "Strategy" : "2HatchMuta" },
+                    { "Weight" : 10, "Strategy" : "3HatchLingBust" },
+                    { "Weight" : 10, "Strategy" : "3HatchHydraBust" },
+                    { "Weight" : 10, "Strategy" : "3HatchMuta" },
+                    { "Weight" : 10, "Strategy" : "3HatchMutaExpo", "Weight2" : 0 },
+                    { "Weight" : 10, "Strategy" : "3HatchPoolHydra", "Weight2" : 0 },
+                    { "Weight" : 10, "Strategy" : "4HatchBeforeGas", "Weight2" : 0 },
+                    { "Weight" : 10, "Strategy" : "4HatchPoolHydra", "Weight2" : 0 },
+                    { "Weight" : 10, "Strategy" : "5HatchPoolHydra", "Weight2" : 0 }
+                ]
+            }
+        },
+
+        "Strategies" :
+        {
+            "4PoolSoft"             : { "Race" : "Zerg",    "OpeningBuildOrder" : ["go overlord closest base", "spawning pool", "Drone", "go scout on min 120", "go scout location", "5 x zergling", "go extractor trick zergling", "14 x zergling"] },
+            "4PoolHard"             : { "Race" : "Zerg",    "OpeningBuildOrder" : ["go overlord closest base", "spawning pool",          "go scout on min 120", "go scout location", "6 x zergling", "go extractor trick zergling", "14 x zergling"] },
+
+            "5Pool"                 : { "Race" : "Zerg",    "OpeningBuildOrder" : ["go overlord closest base", "drone", "spawning pool", "go scout location", "2 x drone", "3 x zergling", "go extractor trick zergling", "4 x zergling", "hatchery @ macro", "drone", "14 x zergling"] },
+            "5PoolSpeed"            : { "Race" : "Zerg",    "OpeningBuildOrder" : ["go overlord closest base", "Drone", "Spawning Pool", "go scout location", "2 x Drone", "3 x zergling", "go extractor trick zergling", "4 x zergling", "Hatchery @ macro", "Drone", "Extractor", "go gas until 100", "Drone", "4 x Zergling", "Metabolic Boost", "10 x Zergling"] },
+
+            "6Pool"                 : { "Race" : "Zerg",    "OpeningBuildOrder" : ["go overlord closest base", "2 x drone", "spawning pool", "go scout location", "2 x drone", "2 x zergling", "overlord", "14 x zergling"] },
+            "6PoolSpeed"            : { "Race" : "Zerg",    "OpeningBuildOrder" : ["go overlord closest base", "2 x drone", "spawning pool", "go scout location", "2 x drone", "extractor", "go gas until 100", "3 x zergling", "overlord", "metabolic boost", "6 x zergling", "drone", "hatchery", "10 x zergling"] },
+
+            "7Pool"                 : { "Race" : "Zerg",    "OpeningBuildOrder" : ["go overlord closest base", "3 x drone", "spawning pool", "go scout location", "drone", "overlord", "drone", "3 x zergling", "hatchery @ macro", "5 x zergling"] },
+
+            "8Pool"                 : { "Race" : "Zerg",    "OpeningBuildOrder" : ["go overlord closest base", "4 x drone", "spawning pool", "go scout location",  "drone", "overlord", "drone", "3 x zergling", "hatchery @ macro", "5 x zergling"] },
+
+            "7PoolHydraLingRush7D"  : { "Race" : "Zerg",    "OpeningBuildOrder" : ["3 x drone", "spawning pool", "extractor", "go gas until 50", "3 x drone", "hydralisk den", "overlord", "go scout location", "go gas until 75", "3 x hydralisk", "zergling", "go gas until 75", "3 x hydralisk", "zergling", "go gas until 75", "3 x hydralisk", "zergling", "go gas until 75", "3 x hydralisk"] },
+            "7PoolHydraRush7D"      : { "Race" : "Zerg",    "OpeningBuildOrder" : ["3 x drone", "spawning pool", "extractor", "go gas until 50", "3 x drone", "hydralisk den", "overlord", "go scout location", "go gas until 75", "3 x hydralisk",             "go gas until 75", "3 x hydralisk",             "go gas until 75", "3 x hydralisk",             "go gas until 75", "3 x hydralisk"] },
+            "8PoolHydraRush8D"      : { "Race" : "Zerg",    "OpeningBuildOrder" : ["4 x drone", "spawning pool", "extractor", "go gas until 50", "3 x drone", "hydralisk den", "overlord", "go scout location", "go gas until 75", "3 x hydralisk",             "go gas until 75", "3 x hydralisk",             "go gas until 75", "3 x hydralisk",             "go gas until 75", "3 x hydralisk"] },
+
+            "9Pool"                 : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x Drone", "Spawning Pool", "go scout once around", "Drone", "go extractor trick", "Overlord", "3 x Zergling", "Hatchery @ natural", "5 x Zergling", "extractor", "go gas until 100", "3 x Drone"] },
+            "9PoolSpeed"            : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x Drone", "Spawning Pool", "go scout once around", "Drone", "Extractor", "go gas until 100", "Overlord", "Drone", "3 x Zergling", "Metabolic Boost", "3 x Zergling", "Hatchery @ natural", "Drone", "go gas until 100", "3 x Zergling"] },
+            "9PoolSpeedLing"        : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x Drone", "Spawning Pool", "go scout once around", "Drone", "Extractor", "go gas until 100", "Overlord", "Drone", "go defensive", "3 x Zergling", "Metabolic Boost", "4 x Zergling", "go aggressive", "Zergling", "Hatchery @ natural", "2 x Drone", "2 x Zergling", "Hatchery @ macro", "2 x Drone", "30 x Zergling", "go gas until 100", "2 x Zergling", "3 x Drone"] },
+            "9PoolExpo"             : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x Drone", "Spawning Pool", "go scout once around", "Drone", "Overlord", "3 x Zergling", "Hatchery @ hidden", "5 x Zergling", "Extractor", "go gas until 100", "3 x Zergling", "2 x Drone"] },
+            "9PoolHatch"            : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x Drone", "Spawning Pool", "go scout once around", "Drone", "go extractor trick", "Overlord", "3 x Zergling", "Hatchery @ macro", "5 x Zergling", "Extractor", "go gas until 100", "3 x Zergling", "2 x Drone"] },
+            "9PoolSunken"           : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x Drone", "Spawning Pool", "go scout once around", "Drone", "Overlord", "Creep Colony @ macro", "Drone", "3 x Zergling", "Sunken Colony", "3 x Zergling", "Hatchery @ macro", "5 x Zergling", "Extractor", "go gas until 100", "2 x Drone"] },
+            "9PoolLurker"           : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "spawning pool", "go scout once around", "drone", "extractor", "overlord", "go gas until 950", "drone", "2 x zergling", "lair", "drone", "hydralisk den", "drone", "lurker aspect", "go defensive", "4 x hydralisk", "4 x lurker", "3 x zergling", "go aggressive", "metabolic boost", "drone", "hatchery"] },
+            "9PoolHydra"            : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "spawning pool", "go scout once around", "drone", "extractor", "go gas until 200", "drone", "hydralisk den", "drone", "overlord", "go defensive", "3 x zergling", "4 x hydralisk", "go aggressive", "3 x zergling", "metabolic boost", "drone"] },
+
+            "9PoolSunkHatch"        : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "spawning pool", "go scout once around", "drone", "creep colony", "drone", "sunken colony", "overlord", "3 x zergling", "hatchery @ macro", "drone", "4 x zergling"] },
+
+            "9PoolHatchGasSpeed7D"  : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "spawning pool", "go scout once around", "drone",                       "overlord", "3 x zergling", "hatchery @ macro", "extractor", "go gas until 100", "4 x zergling", "metabolic boost", "33 x zergling"] },
+            "9PoolGasHatchSpeed7D"  : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "spawning pool", "go scout once around", "drone",                       "overlord", "3 x zergling", "extractor", "go gas until 100", "hatchery @ macro", "2 x zergling", "metabolic boost", "35 x zergling"] },
+            "9PoolHatchGasSpeed8D"  : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "spawning pool", "go scout once around", "drone", "go extractor trick", "overlord", "3 x zergling", "hatchery @ macro", "extractor", "go gas until 100", "4 x zergling", "metabolic boost", "33 x zergling"] },
+            "9PoolGasHatchSpeed8D"  : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "spawning pool", "go scout once around", "drone", "go extractor trick", "overlord", "3 x zergling", "extractor", "go gas until 100", "hatchery @ macro", "2 x zergling", "metabolic boost", "35 x zergling"] },
+
+            "Overpool"              : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x Drone", "Overlord", "Spawning Pool", "3 x Drone", "3 x Zergling", "Hatchery @ natural", "5 x Zergling", "extractor", "go gas until 100", "3 x Drone"] },
+            "OverpoolSpeed"         : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x Drone", "Overlord", "Spawning Pool", "go scout once around", "2 x Drone", "Extractor", "go gas until 100", "Drone", "3 x Zergling", "Metabolic Boost", "3 x Zergling", "Hatchery @ natural", "go gas until 100", "3 x Zergling"] },
+            "OverpoolSunken"        : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x Drone", "Overlord", "Spawning Pool", "go scout once around", "3 x Drone", "Creep Colony @ macro", "Drone", "3 x Zergling", "Sunken Colony",  "3 x Zergling", "Hatchery @ macro", "5 x Zergling", "Extractor", "go gas until 100", "3 x Zergling"] },
+            "OverpoolLurker"        : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "overlord", "spawning pool", "go scout once around", "drone", "extractor", "go gas until 950", "2 x drone", "3 x zergling", "lair", "drone", "hydralisk den", "drone", "lurker aspect", "go defensive", "4 x hydralisk", "4 x lurker", "3 x zergling", "go aggressive", "metabolic boost", "drone", "hatchery"] },
+
+            "OverpoolTurtle"        : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "overlord", "spawning pool", "go scout once around", "3 x drone", "creep colony @ macro", "3 x zergling", "sunken colony", "drone", "creep colony @ macro", "extractor", "go gas until 100", "drone", "sunken colony", "creep colony @ macro", "drone", "sunken colony", "creep colony @ macro", "drone", "sunken colony", "lair", "creep colony @ macro", "drone", "sunken colony", "drone", "go start gas", "creep colony @ macro", "drone", "sunken colony", "zergling", "drone"] },
+            "ZvZ_OverpoolTurtle"    : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "overlord", "spawning pool", "go scout once around", "2 x drone", "extractor", "go gas until 850", "drone", "go defensive", "3 x zergling", "creep colony @ macro", "sunken colony", "lair", "2 x drone", "creep colony @ macro", "spire", "sunken colony", "3 x zergling", "overlord", "drone", "creep colony @ macro", "sunken colony", "6 x mutalisk", "go aggressive", "Hatchery @ macro", "go start gas"] },
+
+            "ZvZ_Overgas9Pool"      : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "overlord", "extractor", "go scout once around", "go gas until 1550", "drone", "spawning pool", "3 x drone", "lair", "zergling", "metabolic boost", "4 x zergling", "Spire", "4 x zergling", "overlord", "3 x mutalisk", "hatchery", "9 x mutalisk", "go start gas", "extractor"]},
+            "ZvZ_Overgas11Pool"     : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "overlord", "extractor", "go scout once around", "go gas until 200",  "3 x drone", "spawning pool", "3 x drone", "lair", "2 x zergling", "metabolic boost", "go gas until 750", "3 x zergling", "Spire", "creep colony @ macro", "zergling", "sunken colony", "2 x zergling", "overlord", "6 x mutalisk", "hatchery", "drone", "2 x zergling", "go start gas"] },
+
+            "ZvZ_Overpool9Gas"      : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "overlord", "spawning pool", "go scout once around", "drone",     "extractor", "go gas until 950", "2 x drone", "go defensive", "3 x zergling", "lair", "zergling", "drone", "2 x zergling", "creep colony", "drone", "spire", "sunken colony", "drone", "overlord", "zergling", "6 x mutalisk", "go aggressive", "Hatchery @ macro", "go start gas"] },
+            "ZvZ_Overpool11Gas"     : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "overlord", "spawning pool", "go scout once around", "3 x drone", "extractor", "go gas until 950",              "go defensive", "3 x zergling", "metabolic boost", "2 x zergling", "lair", "overlord", "drone", "creep colony", "zergling", "sunken colony", "spire", "2 x zergling", "2 x overlord", "6 x mutalisk", "go aggressive", "Hatchery @ macro", "go start gas"] },
+
+            "12Pool"                : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x Drone", "Overlord", "go scout once around", "3 x Drone", "Spawning Pool", "Drone", "Extractor", "go gas until 100", "Hatchery @ natural", "2 x Zergling", "Metabolic Boost", "go gas until 100", "10 x Zergling"] },
+            "12PoolMain"            : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x Drone", "Overlord", "go scout once around", "3 x Drone", "Spawning Pool", "Drone", "Extractor", "go gas until 100", "Hatchery @ macro", "2 x Zergling", "Metabolic Boost", "go gas until 100", "10 x Zergling"] },
+            "12PoolMuta"            : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "overlord", "go scout once around", "3 x drone", "spawning pool", "drone", "extractor", "go start gas", "drone", "Hatchery @ natural", "2 x zergling", "lair", "zergling", "5 x drone", "Spire", "6 x drone", "2 x overlord", "extractor", "9 x mutalisk", "4 x drone"]},
+
+            "11Gas10PoolMuta"       : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "overlord", "2 x drone", "extractor", "go gas until 950", "spawning pool", "go scout once around", "2 x drone", "lair", "3 x zergling", "drone", "metabolic boost", "zergling", "overlord", "Spire", "zergling", "creep colony", "drone", "sunken colony", "2 x zergling", "4 x mutalisk", "hatchery @ main", "2 x mutalisk", "go start gas"] },
+            "11Gas10PoolLurker"     : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "overlord", "2 x drone", "extractor",                     "spawning pool", "go scout once around", "2 x drone", "lair", "3 x zergling", "drone", "overlord", "hydralisk den", "drone", "lurker aspect", "metabolic boost", "4 x hydralisk", "zergling", "3 x lurker", "3 x zergling", "lurker", "hatchery"] },
+
+            "ZvP_9Hatch9Pool"       : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x Drone", "go scout once around", "Hatchery @ natural", "Drone", "Spawning Pool", "Drone", "go extractor trick", "Overlord", "8 x Zergling", "Creep Colony @ natural", "Creep Colony @ natural", "2 x Drone", "Sunken Colony", "Sunken Colony", "Extractor", "go gas until 100", "2 x Drone", "4 x Zergling"] },
+            "ZvP_10Hatch9Pool"      : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x Drone", "go scout once around", "go extractor trick", "Hatchery @ natural", "Spawning Pool", "Drone", "go extractor trick", "Overlord", "8 x Zergling", "Creep Colony @ natural", "Creep Colony @ natural", "2 x Drone", "Sunken Colony", "Sunken Colony", "Extractor", "go gas until 100", "2 x Drone", "4 x Zergling"] },
+            "ZvP_11Hatch10Pool"     : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x Drone", "go scout once around", "Overlord", "2 x Drone", "Hatchery @ natural", "Spawning Pool", "3 x Drone", "8 x Zergling", "Creep Colony @ natural", "Creep Colony @ natural", "2 x Drone", "Sunken Colony", "Sunken Colony",  "Extractor", "go gas until 100", "2 x Drone", "4 x Zergling"] },
+
+            "9Hatch9Pool9Gas"       : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x Drone", "go scout once around", "Hatchery @ natural", "Drone", "Spawning Pool", "Drone", "Extractor", "go gas until 100", "Overlord", "Drone", "3 x Zergling", "metabolic boost", "2 x Zergling", "2 x Drone", "9 x Zergling"] },
+            "9HatchMain8Pool8Gas"   : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x Drone", "go scout once around", "Hatchery @ macro", "Spawning Pool", "Drone", "Extractor", "go gas until 100", "Overlord", "Drone", "3 x Zergling", "metabolic boost", "2 x Zergling", "2 x Drone", "9 x Zergling"] },
+
+            "10Hatch9Pool9gas"      : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x Drone", "go scout once around", "go extractor trick", "Hatchery @ natural", "Spawning Pool", "Drone", "Extractor", "go gas until 100", "Overlord", "Drone", "3 x Zergling", "metabolic boost", "2 x Zergling", "2 x Drone", "9 x Zergling"] },
+            "10HatchMain9Pool9Gas"  : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x Drone", "go scout once around", "go extractor trick", "Hatchery @ macro", "Spawning Pool", "Drone", "Extractor", "go gas until 100", "Overlord", "Drone", "3 x Zergling", "metabolic boost", "2 x Zergling", "2 x Drone", "9 x Zergling"] },
+
+            "9HatchTurtleHydra"     : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "go scout once around", "hatchery @ natural", "Drone", "spawning pool", "drone", "go extractor trick", "Overlord", "drone", "4 x zergling", "2 x drone", "creep colony @ natural", "drone", "sunken colony", "creep colony @ natural", "drone", "sunken colony", "extractor", "creep colony @ natural", "drone", "sunken colony", "4 x zergling", "go gas until 900", "3 x drone", "hatchery @ natural", "hydralisk den", "4 x drone", "zergling", "muscular augments", "10 x hydralisk", "grooved spines", "10 x hydralisk"] },
+            "10HatchTurtleHydra"    : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "go scout once around", "go extractor trick", "hatchery @ natural", "spawning pool", "drone", "go extractor trick", "Overlord", "drone", "4 x zergling", "2 x drone", "creep colony @ natural", "drone", "sunken colony", "creep colony @ natural", "drone", "sunken colony", "extractor", "creep colony @ natural", "drone", "sunken colony", "4 x zergling", "go gas until 900", "3 x drone", "hatchery @ natural", "hydralisk den", "4 x drone", "zergling", "muscular augments", "10 x hydralisk", "grooved spines", "10 x hydralisk"] },
+
+            "11HatchTurtleHydra"    : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "overlord", "go scout once around", "2 x drone", "hatchery @ natural", "spawning pool", "3 x drone", "4 x zergling", "2 x drone", "creep colony @ natural", "drone", "sunken colony", "creep colony @ natural", "drone", "sunken colony", "extractor", "creep colony @ natural", "drone", "sunken colony", "4 x zergling", "go gas until 900", "3 x drone", "hatchery @ natural", "hydralisk den", "4 x drone", "zergling", "muscular augments", "10 x hydralisk", "grooved spines", "10 x hydralisk"] },
+            "11HatchTurtleLurker"   : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "overlord", "go scout once around", "2 x drone", "hatchery @ natural", "spawning pool", "3 x drone", "4 x zergling", "2 x drone", "creep colony @ natural", "drone", "sunken colony", "extractor", "2 x drone", "creep colony @ natural", "drone", "sunken colony", "drone", "creep colony @ natural", "drone", "sunken colony", "4 x zergling", "lair", "4 x drone", "extractor", "metabolic boost", "hydralisk den", "3 x drone", "zergling", "lurker aspect", "4 x drone", "6 x hydralisk", "6 x lurker", "3 x zergling", "hatchery"] },
+            "11HatchTurtleMuta"     : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "overlord", "go scout once around", "2 x drone", "hatchery @ natural", "spawning pool", "3 x drone", "4 x zergling", "2 x drone", "creep colony @ natural", "drone", "sunken colony", "extractor", "2 x drone", "creep colony @ natural", "drone", "sunken colony", "drone", "creep colony @ natural", "drone", "sunken colony", "4 x zergling", "lair", "4 x drone", "extractor", "metabolic boost", "2 x drone", "zergling", "spire", "3 x drone", "3 x zergling", "2 x overlord", "6 x mutalisk", "hatchery", "6 x mutalisk", "2 x zergling"] },
+
+            "12Hatch"               : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x Drone", "Overlord", "go scout once around", "3 x Drone", "Hatchery @ natural", "Spawning Pool", "3 x Drone", "Extractor", "go gas until 100", "6 x Zergling"] },
+            "12HatchMain"           : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x Drone", "Overlord", "go scout once around", "3 x Drone", "Hatchery @ macro", "Spawning Pool", "3 x Drone", "Extractor", "go gas until 100", "6 x Zergling"] },
+            "12HatchTurtle"         : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "overlord", "go scout once around", "3 x drone", "hatchery", "spawning pool", "3 x drone", "3 x zergling", "extractor", "go gas until 200", "2 x zergling", "creep colony @ natural", "creep colony @ natural", "2 x drone", "sunken colony", "sunken colony", "2 x zergling", "metabolic boost", "lair"]},
+
+            "2HatchHydra"           : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x Drone", "overlord", "go scout once around", "3 x drone", "Hatchery @ natural", "Spawning Pool", "3 x Drone", "Extractor", "go start gas", "3 x Zergling", "Hydralisk Den", "4 x Drone", "Grooved Spines", "overlord", "go defensive", "8 x Hydralisk", "Muscular Augments" , "4 x Hydralisk"] },
+            "ZvP_2HatchHydra"       : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "overlord", "go scout once around", "3 x drone", "hatchery @ natural", "spawning pool", "3 x drone", "4 x zergling", "2 x drone", "creep colony @ natural", "creep colony @ natural", "sunken colony", "sunken colony", "3 x zergling", "extractor", "drone", "4 x zergling", "hydralisk den", "3 x zergling", "muscular augments", "4 x hydralisk", "grooved spines", "4 x drone", "8 x hydralisk"]},
+            "2HatchMuta"            : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "overlord", "go scout once around", "3 x drone", "Hatchery @ natural", "spawning pool", "extractor", "go gas until 950", "3 x drone", "3 x zergling", "lair", "overlord", "3 x drone", "creep colony @ natural", "drone", "sunken colony", "3 x drone", "spire", "extractor", "3 x drone", "2 x overlord", "6 x mutalisk", "hatchery", "metabolic boost", "6 x mutalisk"] },
+            "2HatchLurker"          : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "overlord", "go scout once around", "3 x drone", "Hatchery @ natural", "spawning pool", "extractor", "go start gas", "3 x drone", "3 x  zergling", "lair", "overlord", "3 x drone", "hydralisk den", "creep colony @ natural", "drone", "sunken colony", "extractor", "3 x drone", "lurker aspect", "3 x drone", "overlord", "go defensive", "4 x hydralisk", "4 x lurker"] },
+            "2HatchLurkerAllIn"     : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "overlord", "go scout once around", "3 x drone", "hatchery @ natural", "extractor", "drone", "go gas until 1075", "spawning pool", "3 x drone", "2 x zergling", "Lair", "metabolic boost", "creep colony @ natural", "drone", "sunken colony", "drone", "2 x zergling", "hydralisk den", "zergling", "lurker aspect", "3 x zergling", "5 x hydralisk", "overlord", "5 x lurker", "8 x zergling"] },
+
+            "3Hatch"                : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x Drone", "Overlord", "go scout once around", "3 x Drone", "Hatchery @ natural", "Spawning Pool", "3 x Drone", "3 x Zergling", "Hatchery @ macro", "Extractor", "go gas until 100", "3 x Zergling"] },
+            "3HatchExpo"            : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x Drone", "Overlord", "go scout once around", "3 x Drone", "Hatchery @ natural", "Spawning Pool", "3 x Drone", "3 x Zergling", "Hatchery @ min only", "Extractor", "go gas until 100", "3 x Zergling"] },
+
+            "3HatchLingBust"        : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "overlord", "go scout once around", "3 x drone", "hatchery @ natural", "spawning pool", "4 x drone", "hatchery", "2 x zergling", "extractor", "go gas until 100", "4 x zergling", "drone", "metabolic boost", "12 x zergling", "go start gas", "4 x zergling"]},
+            "3HatchHydraBust"       : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "overlord", "go scout once around", "3 x drone", "Hatchery @ natural", "spawning pool", "4 x drone", "hatchery @ natural", "2 x zergling", "4 x drone", "creep colony @ natural", "sunken colony", "overlord", "extractor", "go start gas", "8 x drone", "hydralisk den", "2 x drone", "Muscular Augments", "Extractor", "go defensive", "10 x Hydralisk", "grooved spines", "10 x Hydralisk", "go aggressive", "10 x Hydralisk"] },
+            "3HatchHydra"           : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "overlord", "go scout once around", "3 x drone", "hatchery @ natural", "2 x drone", "spawning pool", "3 x drone", "hatchery @ main"   , "3 x zergling", "extractor", "drone", "2 x zergling", "drone", "hydralisk den", "4 x drone", "extractor", "4 x hydralisk", "muscular augments", "3 x drone", "4 x hydralisk"]},
+            "3HatchHydraExpo"       : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "overlord", "go scout once around", "3 x drone", "hatchery @ natural", "2 x drone", "spawning pool", "3 x drone", "hatchery @ min only", "3 x zergling", "extractor", "drone", "2 x zergling", "drone", "hydralisk den", "4 x drone", "extractor", "4 x hydralisk", "muscular augments", "3 x drone", "4 x hydralisk"]},
+            "3HatchMuta"            : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "overlord", "go scout once around", "3 x drone", "hatchery @ natural", "spawning pool", "2 x drone", "hatchery @ main", "extractor", "go start gas", "3 x zergling", "3 x drone", "lair", "creep colony @ natural", "drone", "sunken colony", "5 x drone", "extractor", "5 x drone", "spire", "7 x drone", "3 x overlord", "zerg flyer carapace", "12 x mutalisk"]},
+            "3HatchMutaExpo"        : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "overlord", "go scout once around", "3 x drone", "hatchery @ natural", "spawning pool", "2 x drone", "hatchery", "extractor", "go start gas", "3 x zergling", "3 x drone", "lair", "creep colony @ natural", "drone", "sunken colony", "5 x drone", "extractor", "5 x drone", "spire", "7 x drone", "3 x overlord", "zerg flyer carapace", "12 x mutalisk"]},
+            "3HatchLurker"          : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "overlord", "go scout once around", "3 x drone", "hatchery @ natural", "spawning pool", "2 x drone", "hatchery @ main", "3 x zergling", "drone", "extractor", "7 x drone", "Lair", "4 x drone", "extractor", "hydralisk den", "metabolic boost", "5 x zergling", "lurker aspect", "3 x drone", "6 x hydralisk", "overlord", "6 x lurker", "3 x zergling"]},
+
+            "3HatchPoolHydra"       : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "overlord", "go scout once around", "3 x drone", "Hatchery @ natural", "4 x drone", "hatchery @ natural", "spawning pool", "2 x drone", "extractor", "go start gas", "8 x drone", "hydralisk den", "6 x drone", "Muscular Augments", "Extractor", "go defensive", "10 x Hydralisk", "grooved spines", "10 x Hydralisk", "go aggressive", "10 x Hydralisk"] },
+            "3HatchPoolHydraExpo"   : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "overlord", "go scout once around", "3 x drone", "Hatchery @ natural", "4 x drone", "hatchery", "spawning pool", "2 x drone", "extractor", "go start gas", "8 x drone", "hydralisk den", "6 x drone", "Muscular Augments", "Extractor", "go defensive", "10 x Hydralisk", "grooved spines", "10 x Hydralisk", "go aggressive", "10 x Hydralisk"] },
+            "3HatchPool"            : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "overlord", "go scout once around", "3 x drone", "Hatchery @ natural", "4 x drone", "hatchery @ natural", "spawning pool", "extractor", "go gas until 100", "8 x drone", "zergling"]},
+            "3HatchPoolExpo"        : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "overlord", "go scout once around", "3 x drone", "Hatchery @ natural", "4 x drone", "hatchery", "spawning pool", "extractor", "go gas until 100", "8 x drone", "zergling"]},
+
+            "4HatchBeforeGas"       : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "overlord", "go scout once around", "3 x drone", "hatchery @ natural", "spawning pool", "3 x drone", "hatchery", "2 x zergling", "3 x drone", "hatchery @ natural", "2 x drone", "extractor", "4 x drone", "evolution chamber", "5 x drone", "2 x zergling", "zerg carapace", "2 x drone", "zergling", "lair", "drone", "hydralisk den"]},
+            "4HatchPoolHydra"       : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "overlord", "go scout once around", "3 x drone", "hatchery @ natural", "3 x drone", "hatchery @ min only", "2 x drone", "hatchery @ natural", "drone", "spawning pool", "extractor", "8 x drone", "zergling", "hydralisk den", "6 x drone", "muscular augments", "4 x drone", "4 x hydralisk", "extractor", "4 x drone"]},
+            "4HatchPool"            : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "overlord", "go scout once around", "3 x drone", "hatchery @ natural", "3 x drone", "hatchery @ min only", "2 x drone", "hatchery @ natural", "drone", "spawning pool", "extractor", "go gas until 100", "8 x drone", "zergling"]},
+
+            "5HatchPoolHydra"       : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "overlord", "go scout once around", "3 x drone", "hatchery @ natural", "3 x drone", "hatchery", "2 x drone", "hatchery @ natural", "4 x drone", "hatchery @ macro", "drone", "spawning pool", "extractor", "go gas until 1000", "11 x drone", "zergling", "hydralisk den", "evolution chamber", "extractor", "8 x drone", "zerg missile attacks", "4 x drone", "muscular augments", "2 x zergling", "4 x drone", "18 x hydralisk", "grooved spines", "hatchery @ macro", "6 x hydralisk", "evolution chamber", "3 x hydralisk"]},
+            "5HatchPool"            : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "overlord", "go scout once around", "3 x drone", "hatchery @ natural", "3 x drone", "hatchery", "2 x drone", "hatchery @ natural", "4 x drone", "hatchery @ macro", "drone", "spawning pool", "extractor", "go gas until 100", "11 x drone", "zergling"]},
+
+            "3HatchHydra_BHG"       : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x Drone", "overlord", "go scout once around", "Hatchery @ macro", "Drone", "Spawning Pool", "3 x Drone", "3 x Zergling", "Hatchery @ macro", "Extractor", "go start gas", "6 x Drone", "Hydralisk Den", "4 x Drone", "Grooved Spines", "go defensive", "8 x Hydralisk", "Muscular Augments", "4 x Hydralisk"] },
+
+            "1HatchMuta_Sparkle"    : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "overlord", "extractor", "go start gas", "drone", "spawning pool", "3 x drone", "lair", "5 x drone", "hatchery @ natural", "spire", "zergling", "drone", "3 x overlord", "zerg flyer carapace", "8 x mutalisk", "extractor", "4 x mutalisk"]},
+            "2HatchMuta_Sparkle"    : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "overlord", "3 x drone", "hatchery @ natural", "spawning pool", "extractor", "go start gas", "3 x drone", "2 x zergling", "lair", "zergling", "5 x drone", "spire", "extractor", "3 x drone", "3 x overlord", "zerg flyer carapace", "12 x mutalisk", "hatchery", "pneumatized carapace"]},
+            "3HatchMuta_Sparkle"    : { "Race" : "Zerg",    "OpeningBuildOrder" : ["5 x drone", "overlord", "3 x drone", "hatchery @ natural", "spawning pool", "2 x drone", "hatchery", "extractor", "go start gas", "3 x zergling", "3 x drone", "lair", "5 x drone", "extractor", "5 x drone", "spire", "7 x drone", "3 x overlord", "zerg flyer carapace", "12 x mutalisk", "evolution chamber", "pneumatized carapace", "2 x drone", "queens nest"]}
+
+        }
+    }
+}

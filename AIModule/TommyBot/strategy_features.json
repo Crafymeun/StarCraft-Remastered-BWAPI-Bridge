@@ -1,0 +1,35 @@
+{
+  "PvP": {
+  	"buildings": ["Protoss_Gateway", "Protoss_Assimilator", "Protoss_Cybernetics_Core", "Protoss_Nexus", "Protoss_Robotics_Facility", "Protoss_Citadel_of_Adun", "Protoss_Forge", "Protoss_Observatory", "Protoss_Photon_Cannon", "Protoss_Templar_Archives", "Protoss_Stargate", "Protoss_Robotics_Support_Bay", "Protoss_Arbiter_Tribunal"],
+  	"units": ["Protoss_Zealot", "Protoss_Dragoon", "Protoss_Observer", "Protoss_Shuttle", "Protoss_High_Templar", "Protoss_Dark_Templar", "Protoss_Archon", "Protoss_Reaver"],
+    "upgrades": ["Singularity_Charge", "Leg_Enhancements", "Protoss_Ground_Weapons"],
+    "tech": ["Psionic_Storm"],
+"dangerous_units": ["Protoss_Zealot", "Protoss_Dragoon", "Protoss_High_Templar", "Protoss_Dark_Templar", "Protoss_Reaver", "Protoss_Archon", "Protoss_Dark_Archon", "Protoss_Scout", "Protoss_Carrier", "Protoss_Interceptor", "Protoss_Arbiter", "Protoss_Corsair", "Protoss_Photon_Cannon"]
+  },
+  "PvT": {
+  	"buildings": ["Protoss_Gateway", "Protoss_Assimilator", "Protoss_Cybernetics_Core", "Protoss_Nexus", "Protoss_Robotics_Facility", "Protoss_Citadel_of_Adun", "Protoss_Forge", "Protoss_Observatory", "Protoss_Photon_Cannon", "Protoss_Templar_Archives", "Protoss_Stargate", "Protoss_Robotics_Support_Bay", "Protoss_Arbiter_Tribunal"],
+  	"units": ["Protoss_Zealot", "Protoss_Dragoon", "Protoss_Observer", "Protoss_Shuttle", "Protoss_High_Templar", "Protoss_Dark_Templar", "Protoss_Reaver", "Protoss_Arbiter"],
+    "upgrades": ["Singularity_Charge", "Leg_Enhancements", "Protoss_Ground_Weapons"],
+    "tech": ["Psionic_Storm", "Stasis_Field"]
+  },
+  "PvZ": {
+  	"buildings": ["Protoss_Gateway", "Protoss_Assimilator", "Protoss_Cybernetics_Core", "Protoss_Nexus", "Protoss_Robotics_Facility", "Protoss_Citadel_of_Adun", "Protoss_Forge", "Protoss_Observatory", "Protoss_Photon_Cannon", "Protoss_Templar_Archives", "Protoss_Stargate", "Protoss_Robotics_Support_Bay", "Protoss_Arbiter_Tribunal"],
+  	"units": ["Protoss_Zealot", "Protoss_Dragoon", "Protoss_Observer", "Protoss_Shuttle", "Protoss_High_Templar", "Protoss_Dark_Templar", "Protoss_Archon", "Protoss_Corsair"],
+    "upgrades": ["Singularity_Charge", "Leg_Enhancements", "Protoss_Ground_Weapons"],
+    "tech": ["Psionic_Storm"]
+  },
+  "TvP": {
+  	"buildings": ["Terran_Factory", "Terran_Starport", "Terran_Academy", "Terran_Comsat_Station", "Terran_Science_Facility", "Terran_Bunker", "Terran_Control_Tower", "Terran_Missile_Turret"],
+  	"units": ["Terran_Marine", "Terran_Medic", "Terran_Firebat", "Terran_Siege_Tank_Tank_Mode", "Terran_Siege_Tank_Siege_Mode", "Terran_Vulture", "Terran_Goliath", "Terran_Dropship", "Terran_Wraith", "Terran_Science_Vessel"],
+	"upgrades": [],
+	"tech": [],
+	"dangerous_units": ["Terran_Marine", "Terran_Firebat", "Terran_Ghost", "Terran_Vulture", "Terran_Vulture_Spider_Mine", "Terran_Siege_Tank_Tank_Mode", "Terran_Siege_Tank_Siege_Mode", "Terran_Goliath", "Terran_Wraith", "Terran_Science_Vessel", "Terran_Battlecruiser", "Terran_Valkyrie", "Terran_Missile_Turret", "Terran_Bunker"]
+  },
+  "ZvP": {
+  	"buildings": ["Zerg_Extractor", "Zerg_Hydralisk_Den", "Zerg_Ultralisk_Cavern", "Zerg_Hive", "Zerg_Hatchery", "Zerg_Lair", "Zerg_Defiler_Mound", "Zerg_Spire", "Zerg_Spore_Colony", "Zerg_Evolution_Chamber", "Zerg_Sunken_Colony", "Zerg_Creep_Colony"],
+  	"units": ["Zerg_Lurker", "Zerg_Ultralisk", "Zerg_Hydralisk", "Zerg_Zergling", "Zerg_Defiler", "Zerg_Scourge", "Zerg_Mutalisk"],
+	"upgrades": [],
+	"tech": [],
+	"dangerous_units": ["Zerg_Zergling", "Zerg_Hydralisk", "Zerg_Lurker", "Zerg_Ultralisk", "Zerg_Defiler", "Zerg_Infested_Terran", "Zerg_Broodling", "Zerg_Mutalisk", "Zerg_Scourge", "Zerg_Queen", "Zerg_Guardian", "Zerg_Devourer", "Zerg_Sunken_Colony", "Zerg_Spore_Colony"]
+  }
+}

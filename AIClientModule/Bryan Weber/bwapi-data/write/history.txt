@@ -1,0 +1,2 @@
+gas_proportion_total, supply_ratio_total, a_army_total, a_econ_total, a_tech_total, r_total, race_total, win_total, sdelay_total, mdelay_total, ldelay_total, name_total, map_name_total, enemy_average_army_, enemy_average_econ_, enemy_average_tech_, opening, score_building, score_kills, score_raze, score_units, detector_count, flyers, duration
+0.109852,0.535991,0.426159,0.573841,0.46731,0.220303,Terran,1,1,0,0,OmegaSquadron,Destinationscx,0.223308,0.776528,0.049992,5pool drone drone ling ling ling overlord ling ling ling ling ling ling ling ling,0,0,0,0,0,0,382

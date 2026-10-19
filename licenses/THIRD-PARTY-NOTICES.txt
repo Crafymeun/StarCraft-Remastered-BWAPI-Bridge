@@ -1,0 +1,7 @@
+Third-party components / 第三方组件
+
+BWAPI 4.4.0: GNU LGPL version 3. See BWAPI-LICENSE.txt.
+MinHook: Copyright (C) 2009-2017 Tsuda Kageyu. BSD 2-clause. See MinHook-LICENSE.txt.
+nlohmann/json: Copyright (c) 2013-2018 Niels Lohmann. MIT. See nlohmann-json-LICENSE.txt.
+Bundled bots and their data remain the works of their respective authors. Their original folders are copied unchanged.
+附带 bot 及其数据归各自作者所有，目录按原样复制。
